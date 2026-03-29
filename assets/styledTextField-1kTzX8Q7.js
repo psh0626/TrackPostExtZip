@@ -1,0 +1,1 @@
+import{t as e}from"./TextField-njXE_ny4.js";import{I as t}from"./Portal-C12LDo-X.js";var n=t(e)({"& .MuiInputLabel-root":{right:0,textAlign:`center`},"& .MuiInputLabel-shrink":{margin:`0 auto`,position:`absolute`,right:`0`,left:`0`,top:`-3px`,width:`150px`,background:`white`},"& .MuiOutlinedInput-root.Mui-focused":{"& legend ":{display:`none`}}});export{n as t};

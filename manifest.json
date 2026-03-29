@@ -1,0 +1,206 @@
+{
+  "manifest_version": 3,
+  "name": "IMIC TrackPost",
+  "description": "Chrome/Edge 확장프로그램 - iCare, GCSS 사무 자동화",
+  "version": "3.1.12",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "fonts/PretendardVariable.woff2"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://icare.post/*"
+      ],
+      "resources": [
+        "assets/chunk-DzMEjpoC.js",
+        "assets/Portal-C12LDo-X.js",
+        "assets/injectUtil-D0nv-lOi.js",
+        "assets/compiler-runtime-C3vgDlQ2.js",
+        "assets/MenuItem-B34gflbU.js",
+        "assets/IMICSettings-BiaPOkDh.js",
+        "assets/PostUtil--15dR_qc.js",
+        "assets/Message-C7EV_Io-.js",
+        "assets/Fab-DsneyvcY.js",
+        "assets/listItemTextClasses-D28lrBkC.js",
+        "assets/icareScript.tsx-Dvqmx2YE.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://gcss.ipc.be/*"
+      ],
+      "resources": [
+        "assets/Portal-C12LDo-X.js",
+        "assets/injectUtil-D0nv-lOi.js",
+        "assets/IMICSettings-BiaPOkDh.js",
+        "assets/exchangeRateUtil-DnHIxhLZ.js",
+        "assets/Message-C7EV_Io-.js",
+        "assets/chunk-DzMEjpoC.js",
+        "assets/Fab-DsneyvcY.js",
+        "assets/oldGcssScript.tsx-5ObcNc5_.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://gcss-uat.ipc.be/*"
+      ],
+      "resources": [
+        "assets/Portal-C12LDo-X.js",
+        "assets/injectUtil-D0nv-lOi.js",
+        "assets/IMICSettings-BiaPOkDh.js",
+        "assets/TimespanExtension-D-wRHErB.js",
+        "assets/exchangeRateUtil-DnHIxhLZ.js",
+        "assets/Message-C7EV_Io-.js",
+        "assets/newGcssWrapper-DVuQW-O-.js",
+        "assets/chunk-DzMEjpoC.js",
+        "assets/Fab-DsneyvcY.js",
+        "assets/newGcssScript.ts-BrUte2kO.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://gcss.ipc.be/*",
+        "https://gcss.ipc.be/*",
+        "https://gcss.ipc.be/*"
+      ],
+      "resources": [
+        "assets/gcssSumScript-Q0Eqm17o.js",
+        "assets/gcssSumScript.ts-0yqtrosA.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://kmmbox.korea.kr/*"
+      ],
+      "resources": [
+        "assets/TimespanExtension-D-wRHErB.js",
+        "assets/Message-C7EV_Io-.js",
+        "assets/kmmboxScript.ts-Da0mToJB.js"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://mail.posa.or.kr/*"
+      ],
+      "resources": [
+        "assets/posamailScript.js-Bt3NAbGq.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ],
+  "options_page": "src/background-service/ui/options.html",
+  "action": {
+    "default_popup": "src/background-service/ui/popup.html",
+    "default_title": "IMIC TRACKPOST V3"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "tabGroups",
+    "sidePanel",
+    "webRequest",
+    "clipboardWrite",
+    "notifications",
+    "unlimitedStorage",
+    "scripting"
+  ],
+  "side_panel": {
+    "default_path": "src/background-service/ui/sidepanel.html"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "host_permissions": [
+    "https://ems.epost.go.kr/*",
+    "https://icare.post/*",
+    "https://gcss.ipc.be/*",
+    "https://github.com/psh0626/TrackPostExtZip/commits/main/",
+    "https://github.com/psh0626/TrackPostExtZip/releases/*",
+    "https://gcss-uat.ipc.be/*",
+    "https://kmmbox.korea.kr/*",
+    "https://mail.posa.or.kr/*",
+    "http://localhost:5173/"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "assets/icareScript.tsx-loader-B86sOGep.js"
+      ],
+      "matches": [
+        "https://icare.post/*"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "js": [
+        "assets/oldGcssScript.tsx-loader-B5VQA-XN.js"
+      ],
+      "matches": [
+        "https://gcss.ipc.be/*"
+      ],
+      "run_at": "document_idle",
+      "exclude_matches": [
+        "https://gcss.ipc.be/CSS/gcss/*/alerts/show/SUM_REPLY",
+        "https://gcss.ipc.be/CSS/gcss/*/alerts/show/SUM_REQ",
+        "https://gcss.ipc.be/CSS/gcss/*/alerts/show/QUM_REQ"
+      ]
+    },
+    {
+      "js": [
+        "assets/newGcssScript.ts-loader-B229oxsb.js"
+      ],
+      "matches": [
+        "https://gcss-uat.ipc.be/*"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "assets/newGcssScript-DsQe-Ju9.css"
+      ]
+    },
+    {
+      "js": [
+        "assets/gcssSumScript.ts-loader-DEhsgS1k.js"
+      ],
+      "matches": [
+        "https://gcss.ipc.be/CSS/gcss/*/alerts/show/SUM_REPLY",
+        "https://gcss.ipc.be/CSS/gcss/*/alerts/show/SUM_REQ",
+        "https://gcss.ipc.be/CSS/gcss/*/alerts/show/QUM_REQ"
+      ]
+    },
+    {
+      "js": [
+        "assets/kmmboxScript.ts-loader-Yfck7icO.js"
+      ],
+      "matches": [
+        "https://kmmbox.korea.kr/*"
+      ]
+    },
+    {
+      "js": [
+        "assets/posamailScript.js-Bt3NAbGq.js"
+      ],
+      "matches": [
+        "https://mail.posa.or.kr/*"
+      ],
+      "world": "MAIN"
+    }
+  ]
+}
