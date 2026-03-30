@@ -1,7 +1,4 @@
-# TrackPost 확장프로그램
-
-<img width="389" alt="image" src="https://github.com/user-attachments/assets/1672e52a-9a8c-4203-b0a9-1f950fed8fc8" />
-
+# <img width="32" src="/icon.png"/>  TrackPost 확장프로그램
 
 - 설치방법    
 >1. 바탕화면 등에 새폴더를 만들고, [dist.zip](https://github.com/psh0626/TrackPostExtZip/releases "확장프로그램 다운로드") 파일을 압축 해제합니다.
@@ -16,3 +13,5 @@
 
 - 사용 방법 및 프로그램 안내
   - TO BE WRITTEN
+
+<img width="389" alt="image" src="https://github.com/user-attachments/assets/1672e52a-9a8c-4203-b0a9-1f950fed8fc8" />
