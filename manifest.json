@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "IMIC TrackPost",
   "description": "Chrome/Edge 확장프로그램 - iCare, GCSS 사무 자동화",
-  "version": "3.1.15",
+  "version": "3.1.16",
   "icons": {
     "16": "icon.png",
     "32": "icon.png",
@@ -29,12 +29,12 @@
         "assets/injectUtil-D0nv-lOi.js",
         "assets/compiler-runtime-C3vgDlQ2.js",
         "assets/MenuItem-B34gflbU.js",
-        "assets/IMICSettings-BiaPOkDh.js",
+        "assets/IMICSettings-BlmG56xd.js",
         "assets/PostUtil--15dR_qc.js",
-        "assets/Message-C7EV_Io-.js",
+        "assets/Message-COSXPvc2.js",
         "assets/Fab-DsneyvcY.js",
         "assets/listItemTextClasses-D28lrBkC.js",
-        "assets/icareScript.tsx-Dvqmx2YE.js"
+        "assets/icareScript.tsx-DCP6LPXd.js"
       ],
       "use_dynamic_url": false
     },
@@ -45,12 +45,12 @@
       "resources": [
         "assets/Portal-C12LDo-X.js",
         "assets/injectUtil-D0nv-lOi.js",
-        "assets/IMICSettings-BiaPOkDh.js",
-        "assets/exchangeRateUtil-DnHIxhLZ.js",
-        "assets/Message-C7EV_Io-.js",
+        "assets/IMICSettings-BlmG56xd.js",
+        "assets/exchangeRateUtil-DcgjzVtf.js",
+        "assets/Message-COSXPvc2.js",
         "assets/chunk-DzMEjpoC.js",
         "assets/Fab-DsneyvcY.js",
-        "assets/oldGcssScript.tsx-5ObcNc5_.js"
+        "assets/oldGcssScript.tsx-DU1vl93M.js"
       ],
       "use_dynamic_url": false
     },
@@ -61,14 +61,14 @@
       "resources": [
         "assets/Portal-C12LDo-X.js",
         "assets/injectUtil-D0nv-lOi.js",
-        "assets/IMICSettings-BiaPOkDh.js",
+        "assets/IMICSettings-BlmG56xd.js",
         "assets/TimespanExtension-D-wRHErB.js",
-        "assets/exchangeRateUtil-DnHIxhLZ.js",
-        "assets/Message-C7EV_Io-.js",
+        "assets/exchangeRateUtil-DcgjzVtf.js",
+        "assets/Message-COSXPvc2.js",
         "assets/newGcssWrapper-DVuQW-O-.js",
         "assets/chunk-DzMEjpoC.js",
         "assets/Fab-DsneyvcY.js",
-        "assets/newGcssScript.ts-BrUte2kO.js"
+        "assets/newGcssScript.ts-BfFetk3N.js"
       ],
       "use_dynamic_url": false
     },
@@ -90,8 +90,8 @@
       ],
       "resources": [
         "assets/TimespanExtension-D-wRHErB.js",
-        "assets/Message-C7EV_Io-.js",
-        "assets/kmmboxScript.ts-Da0mToJB.js"
+        "assets/Message-COSXPvc2.js",
+        "assets/kmmboxScript.ts-CXCTLRys.js"
       ],
       "use_dynamic_url": false
     },
@@ -136,13 +136,12 @@
     "https://kmmbox.korea.kr/*",
     "https://mail.posa.or.kr/*",
     "http://localhost:5173/",
-    "https://github.com/psh0626/TrackPostExtZip/commits/*",
-    "https://github.com/psh0626/TrackPostExtZip/releases/*"
+    "https://github.com/psh0626/TrackPostExtZip/*"
   ],
   "content_scripts": [
     {
       "js": [
-        "assets/icareScript.tsx-loader-B86sOGep.js"
+        "assets/icareScript.tsx-loader-XpnIGV6F.js"
       ],
       "matches": [
         "https://icare.post/*"
@@ -151,7 +150,7 @@
     },
     {
       "js": [
-        "assets/oldGcssScript.tsx-loader-B5VQA-XN.js"
+        "assets/oldGcssScript.tsx-loader-CoSP8gEb.js"
       ],
       "matches": [
         "https://gcss.ipc.be/*"
@@ -165,7 +164,7 @@
     },
     {
       "js": [
-        "assets/newGcssScript.ts-loader-B229oxsb.js"
+        "assets/newGcssScript.ts-loader-BcEOnQwK.js"
       ],
       "matches": [
         "https://gcss-uat.ipc.be/*"
@@ -187,7 +186,7 @@
     },
     {
       "js": [
-        "assets/kmmboxScript.ts-loader-Yfck7icO.js"
+        "assets/kmmboxScript.ts-loader-6JYVtTAp.js"
       ],
       "matches": [
         "https://kmmbox.korea.kr/*"
