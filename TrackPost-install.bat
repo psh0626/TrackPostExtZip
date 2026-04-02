@@ -1,39 +1,39 @@
 @echo off
 
-echo ¾Ë¸² ¼¾ÅÍ ÄÑ±â
+echo ì•Œë¦¼ ì„¼í„° ì¼œê¸°
 set "KEY1=HKCU\Software\Policies\Microsoft\Windows\Explorer"
 reg add "%KEY1%" /v DisableNotificationCenter /t REG_DWORD /d 0 /f
-echo ¾Ë¸² ¼¾ÅÍ ÄÑ±â ¿Ï·á
+echo ì•Œë¦¼ ì„¼í„° ì¼œê¸° ì™„ë£Œ
 echo.
 
-echo PushNotifications °ü·Ã ¼³Á¤
+echo PushNotifications ê´€ë ¨ ì„¤ì •
 set "KEY2=HKCU\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications"
 reg add "%KEY2%" /v NoTileApplicationNotification /t REG_DWORD /d 0 /f
 reg add "%KEY2%" /v NoToastApplicationNotification /t REG_DWORD /d 0 /f
 reg add "%KEY2%" /v NoToastApplicationNotificationOnLockScreen /t REG_DWORD /d 0 /f
-echo PushNotifications °ü·Ã ¼³Á¤ ¿Ï·á
+echo PushNotifications ê´€ë ¨ ì„¤ì • ì™„ë£Œ
 echo.
 
-echo ====¿§Áö ¼³Á¤ ½ÃÀÛ====
-echo Ç×»ó È°¼ºÈ­ »çÀÌÆ® ¼³Á¤
+echo ====ì—£ì§€ ì„¤ì • ì‹œì‘====
+echo í•­ìƒ í™œì„±í™” ì‚¬ì´íŠ¸ ì„¤ì •
 set "KEY3=HKCU\Software\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls"
 reg add "%KEY3%" /v 1 /t REG_SZ /d "https://gcss.ipc.be" /f
 reg add "%KEY3%" /v 2 /t REG_SZ /d "https://gcss-uat.ipc.be" /f
 reg add "%KEY3%" /v 3 /t REG_SZ /d "https://icare.post" /f
 reg add "%KEY3%" /v 4 /t REG_SZ /d "https://kmmbox.korea.kr" /f
 reg add "%KEY3%" /v 5 /t REG_SZ /d "https://mail.posa.or.kr" /f
-echo Ç×»ó È°¼ºÈ­ »çÀÌÆ® ¼³Á¤ ¿Ï·á
+echo í•­ìƒ í™œì„±í™” ì‚¬ì´íŠ¸ ì„¤ì • ì™„ë£Œ
 echo.
 
-echo È®ÀåÇÁ·Î±×·¥ ¼³Á¤
+echo í™•ì¥í”„ë¡œê·¸ë¨ ì„¤ì •
 set "KEY4=HKCU\Software\Policies\Microsoft\Edge"
 reg add "%KEY4%\ExtensionInstallAllowlist" /v 1 /t REG_SZ /d "ceaglmnlneffokklakakncncaholckem" /f
 reg add "%KEY4%\ExtensionInstallForcelist" /v 1 /t REG_SZ /d "ceaglmnlneffokklakakncncaholckem;https://raw.githubusercontent.com/psh0626/TrackPostExtZip/main/updateManifest.xml" /f
 reg add "%KEY4%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" /v toolbar_state /t REG_SZ /d "force_shown" /f
 reg add "%KEY4%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" /v sidebar_auto_open_blocked /t REG_SZ /d "false" /f
-echo È®ÀåÇÁ·Î±×·¥ ¼³Á¤ ¿Ï·á
-echo ====¿§Áö ¼³Á¤ ¿Ï·á====
+echo í™•ì¥í”„ë¡œê·¸ë¨ ì„¤ì • ì™„ë£Œ
+echo ====ì—£ì§€ ì„¤ì • ì™„ë£Œ====
 echo.
 
-echo ¿§Áö¸¦ Àç½ÃÀÛÇÏ¼¼¿ä.
+echo ì—£ì§€ë¥¼ ì¬ì‹œì‘í•˜ì„¸ìš”.
 pause
