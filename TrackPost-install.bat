@@ -114,7 +114,12 @@ echo.
 call :run_reg_add "%KEY3%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" "toolbar_state" "REG_SZ" "force_shown"
 echo.
 call :run_reg_add "%KEY3%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" "sidebar_auto_open_blocked" "REG_SZ" "false"
+echo.
 call :run_reg_add "%KEY3%" "ExtensionDeveloperModeSettings" "REG_DWORD" "0"
+echo.
+call :run_reg_add "%KEY3%" "DeveloperToolsAvailability" "REG_DWORD" "1"
+echo.
+call :run_reg_add "%KEY3%" "DeveloperToolsDisabled" "REG_DWORD" "0"
 echo !COLOR_SECTION!--확장프로그램 설정 완료--!COLOR_RESET!
 
 echo.
@@ -162,7 +167,11 @@ echo.
 call :run_reg_add "%KEY5%\ExtensionInstallForcelist" "1" "REG_SZ" "ceaglmnlneffokklakakncncaholckem;https://raw.githubusercontent.com/psh0626/TrackPostExtZip/main/updateManifest.xml"
 echo.
 call :run_reg_add "%KEY5%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" "toolbar_pin" "REG_SZ" "force_pinned"
-call :run_reg_add "%KEY5%" "ExtensionDeveloperModeSettings" "REG_DWORD" "0"
+call :run_reg_add "%KEY5%" "ExtensionDeveloperModeSettings" "REG_DWORD" "1"
+echo.
+call :run_reg_add "%KEY5%" "DeveloperToolsAvailability" "REG_DWORD" "1"
+echo.
+call :run_reg_add "%KEY5%" "DeveloperToolsDisabled" "REG_DWORD" "0"
 echo !COLOR_SECTION!--확장프로그램 설정 완료--!COLOR_RESET!
 
 echo.
