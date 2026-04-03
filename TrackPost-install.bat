@@ -172,7 +172,7 @@ call :run_reg_add "%KEY5%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" "t
 echo.
 call :run_reg_add "%KEY5%\ExtensionSettings\ceaglmnlneffokklakakncncaholckem" "override_update_url" "REG_SZ" "true"
 echo.
-call :run_reg_add "%KEY5%" "ExtensionDeveloperModeSettings" "REG_DWORD" "1"
+call :run_reg_add "%KEY5%" "ExtensionDeveloperModeSettings" "REG_DWORD" "0"
 echo.
 call :run_reg_add "%KEY5%" "DeveloperToolsAvailability" "REG_DWORD" "1"
 echo.
