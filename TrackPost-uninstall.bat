@@ -1,4 +1,4 @@
-chcp 65001 >nul
+﻿chcp 65001 >nul
 @echo off
 setlocal EnableDelayedExpansion
 
@@ -23,33 +23,6 @@ set /a EDGE_FAIL_COUNT=0
 set /a CHROME_TOTAL_COUNT=0
 set /a CHROME_SUCCESS_COUNT=0
 set /a CHROME_FAIL_COUNT=0
-
-goto MAIN
-
-
-:run_reg_delete
-set "REG_KEY=%~1"
-
-echo !COLOR_INFO![삭제]!COLOR_RESET! !REG_KEY!
-set /a REG_TOTAL_COUNT+=1
-if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_TOTAL_COUNT+=1
-if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_TOTAL_COUNT+=1
-reg delete "%REG_KEY%" /f >nul 2>&1
-if errorlevel 1 (
-	set /a REG_FAIL_COUNT+=1
-	if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_FAIL_COUNT+=1
-	if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_FAIL_COUNT+=1
-	echo !COLOR_FAIL![실패]!COLOR_RESET! !COLOR_BOLD!레지스트리 삭제에 실패했습니다.!COLOR_RESET!
-	for /f "delims=" %%L in ('reg delete "%REG_KEY%" /f 2^>^&1') do echo !COLOR_WARN![원인]!COLOR_RESET! %%L
-) else (
-	set /a REG_SUCCESS_COUNT+=1
-	if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_SUCCESS_COUNT+=1
-	if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_SUCCESS_COUNT+=1
-	echo !COLOR_OK![성공]!COLOR_RESET! !COLOR_BOLD!레지스트리 삭제를 완료했습니다.!COLOR_RESET!
-)
-exit /b
-
-:MAIN
 
 set "CURRENT_TITLE=EDGE"
 echo !COLOR_TITLE!====엣지 설정 삭제 시작====!COLOR_RESET!
@@ -91,3 +64,25 @@ echo.
 echo 인터넷 브라우저/컴퓨터를 재시작하면 새로운 설정이 적용됩니다.
 pause
 endlocal
+
+:run_reg_delete
+set "REG_KEY=%~1"
+
+echo !COLOR_INFO![삭제]!COLOR_RESET! !REG_KEY!
+set /a REG_TOTAL_COUNT+=1
+if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_TOTAL_COUNT+=1
+if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_TOTAL_COUNT+=1
+reg delete "%REG_KEY%" /f >nul 2>&1
+if errorlevel 1 (
+	set /a REG_FAIL_COUNT+=1
+	if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_FAIL_COUNT+=1
+	if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_FAIL_COUNT+=1
+	echo !COLOR_FAIL![실패]!COLOR_RESET! !COLOR_BOLD!레지스트리 삭제에 실패했습니다.!COLOR_RESET!
+	for /f "delims=" %%L in ('reg delete "%REG_KEY%" /f 2^>^&1') do echo !COLOR_WARN![원인]!COLOR_RESET! %%L
+) else (
+	set /a REG_SUCCESS_COUNT+=1
+	if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_SUCCESS_COUNT+=1
+	if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_SUCCESS_COUNT+=1
+	echo !COLOR_OK![성공]!COLOR_RESET! !COLOR_BOLD!레지스트리 삭제를 완료했습니다.!COLOR_RESET!
+)
+exit /b
