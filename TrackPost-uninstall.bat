@@ -1,4 +1,4 @@
-﻿chcp 65001 >nul
+chcp 65001 >nul
 @echo off
 setlocal EnableDelayedExpansion
 
@@ -28,11 +28,11 @@ set "CURRENT_TITLE=EDGE"
 echo !COLOR_TITLE!====엣지 설정 삭제 시작====!COLOR_RESET!
 set "choice=Y"
 set /p choice=엣지 TrackPost 설치 및 관련 설정 삭제를 진행하시겠습니까? (Y/N): 
-if /i "%choice%"=="N" goto EDGE_END
+if /i "!choice!"=="N" goto EDGE_END
 
 echo.
 set "KEY3=HKCU\Software\Policies\Microsoft\Edge"
-call :run_reg_delete "%KEY3%"
+call :run_reg_delete "!KEY3!"
 echo.
 
 :EDGE_END
@@ -44,12 +44,12 @@ set "CURRENT_TITLE=CHROME"
 echo !COLOR_TITLE!====크롬 설정 삭제 시작====!COLOR_RESET!
 set "choice=Y"
 set /p choice=크롬 TrackPost 설치 및 관련 설정 삭제를 진행하시겠습니까? (Y/N): 
-if /i "%choice%"=="N" goto CHROME_END
+if /i "!choice!"=="N" goto CHROME_END
 
 echo.
 echo !COLOR_SECTION!--확장프로그램 설정--!COLOR_RESET!
 set "KEY5=HKCU\Software\Policies\Google\Chrome"
-call :run_reg_delete "%KEY5%"
+call :run_reg_delete "!KEY5!"
 echo.
 
 :CHROME_END
@@ -64,6 +64,7 @@ echo.
 echo 인터넷 브라우저/컴퓨터를 재시작하면 새로운 설정이 적용됩니다.
 pause
 endlocal
+exit /b
 
 :run_reg_delete
 set "REG_KEY=%~1"
@@ -72,13 +73,13 @@ echo !COLOR_INFO![삭제]!COLOR_RESET! !REG_KEY!
 set /a REG_TOTAL_COUNT+=1
 if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_TOTAL_COUNT+=1
 if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_TOTAL_COUNT+=1
-reg delete "%REG_KEY%" /f >nul 2>&1
+reg delete "!REG_KEY!" /f >nul 2>&1
 if errorlevel 1 (
 	set /a REG_FAIL_COUNT+=1
 	if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_FAIL_COUNT+=1
 	if /i "!CURRENT_TITLE!"=="CHROME" set /a CHROME_FAIL_COUNT+=1
 	echo !COLOR_FAIL![실패]!COLOR_RESET! !COLOR_BOLD!레지스트리 삭제에 실패했습니다.!COLOR_RESET!
-	for /f "delims=" %%L in ('reg delete "%REG_KEY%" /f 2^>^&1') do echo !COLOR_WARN![원인]!COLOR_RESET! %%L
+	for /f "delims=" %%L in ('reg delete "!REG_KEY!" /f 2^>^&1') do echo !COLOR_WARN![원인]!COLOR_RESET! %%L
 ) else (
 	set /a REG_SUCCESS_COUNT+=1
 	if /i "!CURRENT_TITLE!"=="EDGE" set /a EDGE_SUCCESS_COUNT+=1
