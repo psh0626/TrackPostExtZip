@@ -91,10 +91,10 @@ https://mail.posa.or.kr
 
 ## Options Page
 
-<img height="608" alt="optionsPage" src="https://github.com/user-attachments/assets/bad6941f-f444-47d6-ad58-0d18d4b960ad" />
-<img width="534" align="top" alt="image" src="https://github.com/user-attachments/assets/1c046255-725a-4cac-9ab0-497804060641" />
-<img height="608" alt="image" src="https://github.com/user-attachments/assets/c846d4b1-88ee-4f02-84fe-5e5fa5225d9d" />
-<img height="352" align="top" alt="image" src="https://github.com/user-attachments/assets/9e5cd142-650e-4ab1-8a7e-9ac677454edf" />
+<img width="408" alt="optionsPage" src="https://github.com/user-attachments/assets/bad6941f-f444-47d6-ad58-0d18d4b960ad" />
+<img width="334" align="top" alt="image" src="https://github.com/user-attachments/assets/1c046255-725a-4cac-9ab0-497804060641" />
+<img width="408" alt="image" src="https://github.com/user-attachments/assets/c846d4b1-88ee-4f02-84fe-5e5fa5225d9d" />
+<img width="352" align="top" alt="image" src="https://github.com/user-attachments/assets/9e5cd142-650e-4ab1-8a7e-9ac677454edf" />
 
 
 ## Windows Notification
