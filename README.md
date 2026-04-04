@@ -49,14 +49,14 @@
     
 | **Windows 설정** | **Microsoft Edge 설정** | **Google Chrome 설정** |
 | :--- | :--- | :--- |
-| 알림 센터 활성화 <image width=120 /> | TrackPost 확장 설치 허용 목록 추가 <image width=80 /> | TrackPost 확장 설치 허용 목록 추가 <image width=80 /> |
+| 알림 센터 활성화 | TrackPost 확장 설치 허용 목록 추가 | TrackPost 확장 설치 허용 목록 추가 |
 | 토스트/앱 알림 허용 | TrackPost 확장 강제 설치 | TrackPost 확장 강제 설치 |
 | 빙 검색 제안 비활성화 | 확장 업데이트 URL override 허용 | 확장 업데이트 URL override 허용 |
 | 오류 보고 기능 끄기 | 개발자 도구 관련 제한 해제 | 개발자 도구 관련 제한 해제 |
 |  | 탭 절전 예외 사이트 등록 | 탭 절전 예외 사이트 등록 |
 |  | 툴바에 강제 표시 | 툴바에 강제 표시 |
 |  | 사이드바 자동 열림 차단 해제 |  |
-|  | 기본 검색 엔진을 Google로 설정 |  |
+| 　　　　　　　　　　　　　　 | 기본 검색 엔진을 Google로 설정 　　　　　 | 　　　　 　　　　　　　　　　　　　 |
 
 
 
