@@ -4,14 +4,14 @@
 미확인 메시지 확인 및 알림, 국내 접수 정보 조회, 조사 요청 시 필수 항목 자동 입력, SDR 환율 계산 등 다양한 기능을 통해 국제우편 조사 업무의 효율을 높여줍니다.
 <br /><br />
 
-## <div align="center"> 기능 </div>
+## 기능
 
 - **미확인 메시지 조회 및 알림**
-    - Popup UI에서 미확인 회신·문의·통지를 한눈에 확인할 수 있습니다.
+    - `Popup UI`에서 미확인 회신·문의·통지를 한눈에 확인할 수 있습니다.
     - `등기번호 복사`, `국가 복사`, `모두 열기` 등 빠른 처리 기능을 제공합니다.
 
 - **국내 접수 정보 간편 조회**
-    - Popup UI에 등기번호를 입력하면 국내 접수 정보를 조회하여 Sidepanel에 표시합니다.
+    - `Popup UI`에 등기번호를 입력하면 국내 접수 정보를 조회하여 `Sidepanel`에 표시합니다.
 
 - **상대국 조사 요청 작성 지원**
     - 조사 요청 시 필요한 항목을 자동으로 입력해 작성 시간을 줄여줍니다.
@@ -30,7 +30,7 @@
     - 미확인 이메일 수를 브라우저 제목에 표시해 빠르게 확인할 수 있습니다.
 <br /><br />
 
-## <div align="center"> 설치 방법 </div>
+## 설치 방법
 
 > [!Note]
 >
@@ -78,8 +78,27 @@ https://mail.posa.or.kr
 
 <br />
 
-## <div align="center"> 작동 화면 </div>
+## 작동 화면
 
 ### Popup UI
 
-<img width="389" alt="image" src="https://github.com/user-attachments/assets/1672e52a-9a8c-4203-b0a9-1f950fed8fc8" />
+<img width="394" align="top" alt="image" src="https://github.com/user-attachments/assets/e6d02ac7-7d31-46fc-98d5-04eb1735c63a" />
+<img width="389" alt="image" src="https://github.com/user-attachments/assets/af2d252f-f803-4d5d-9936-251ad7c498ec" />
+
+## Sidepanel
+
+<img height="600" alt="image" src="https://github.com/user-attachments/assets/b9c96e91-16b8-466d-8324-f6d664302290" />
+
+## Options Page
+
+<img height="608" alt="optionsPage" src="https://github.com/user-attachments/assets/bad6941f-f444-47d6-ad58-0d18d4b960ad" />
+<img width="534" align="top" alt="image" src="https://github.com/user-attachments/assets/1c046255-725a-4cac-9ab0-497804060641" />
+<img height="608" alt="image" src="https://github.com/user-attachments/assets/c846d4b1-88ee-4f02-84fe-5e5fa5225d9d" />
+<img height="352" align="top" alt="image" src="https://github.com/user-attachments/assets/9e5cd142-650e-4ab1-8a7e-9ac677454edf" />
+
+
+## Windows Notification
+
+<img width="445" height="279" alt="image" src="https://github.com/user-attachments/assets/8cb8bb70-8d54-4da7-93b1-ac6479e852f5" />
+
+
