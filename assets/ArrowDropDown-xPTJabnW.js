@@ -1,1 +1,0 @@
-import{A as e,yt as t}from"./Portal-C12LDo-X.js";var n=e((0,t().jsx)(`path`,{d:`m7 10 5 5 5-5z`}),`ArrowDropDown`);export{n as t};
