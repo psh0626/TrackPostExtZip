@@ -62,9 +62,9 @@ exit /b
 :MAIN
 set "CURRENT_TITLE=WINDOWS"
 echo !COLOR_TITLE!====윈도우 설정 시작====!COLOR_RESET!
-set "choice=Y"
-set /p choice=윈도우 알림 및 편의 기능 설정을 진행하시겠습니까? (Y/N): 
-if /i "%choice%"=="N" goto WINDOWS_END
+set "windowChoice=Y"
+set /p windowChoice=윈도우 알림 및 편의 기능 설정을 진행하시겠습니까? (엔터) 
+if /i "%windowChoice%"=="N" goto WINDOWS_END
 
 echo.
 echo !COLOR_SECTION!--알림 센터 켜기--!COLOR_RESET!
@@ -101,7 +101,7 @@ echo.
 set "CURRENT_TITLE=EDGE"
 echo !COLOR_TITLE!====엣지 설정 시작====!COLOR_RESET!
 set "choice=Y"
-set /p choice=엣지 TrackPost 설치 및 관련 설정을 진행하시겠습니까? (Y/N): 
+set /p choice=엣지 TrackPost 설치 및 관련 설정을 진행하시겠습니까? (엔터) 
 if /i "%choice%"=="N" goto EDGE_END
 
 echo.
@@ -158,7 +158,7 @@ echo.
 set "CURRENT_TITLE=CHROME"
 echo !COLOR_TITLE!====크롬 설정 시작====!COLOR_RESET!
 set "choice=Y"
-set /p choice=크롬 TrackPost 설치 및 관련 설정을 진행하시겠습니까? (Y/N): 
+set /p choice=크롬 TrackPost 설치 및 관련 설정을 진행하시겠습니까? (엔터) 
 if /i "%choice%"=="N" goto CHROME_END
 
 echo.
@@ -203,6 +203,16 @@ echo !COLOR_TITLE!====전체 설정 완료====!COLOR_RESET!
 echo !COLOR_INFO![전체 설정]!COLOR_RESET! !COLOR_BOLD!총 !REG_TOTAL_COUNT!건!COLOR_RESET! / !COLOR_OK!성공 !REG_SUCCESS_COUNT!건!COLOR_RESET! / !COLOR_FAIL!실패 !REG_FAIL_COUNT!건!COLOR_RESET!
 echo !COLOR_TITLE!====================!COLOR_RESET!
 echo.
+
+if /i "%windowChoice%"=="N" goto WINDOWS_IGNORED
+
 echo 인터넷 브라우저/컴퓨터를 재시작하면 새로운 설정이 적용됩니다.
 pause
 endlocal
+exit /b
+
+:WINDOWS_IGNORED
+echo 인터넷 브라우저를 재시작하면 새로운 설정이 적용됩니다.
+pause
+endlocal
+exit /b
