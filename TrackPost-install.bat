@@ -1,5 +1,5 @@
-chcp 65001 >nul
 @echo off
+chcp 65001 >nul
 setlocal EnableDelayedExpansion
 
 for /f %%E in ('echo prompt $E^| cmd') do set "ESC=%%E"
@@ -96,7 +96,7 @@ echo.
 echo !COLOR_SECTION!--애니메이션 기능 켜기--!COLOR_RESET!
 call :run_reg_add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" "VisualFXSetting" "REG_DWORD" "1"
 call :run_reg_add "HKCU\Control Panel\Desktop\WindowMetrics" "MinAnimate" "REG_SZ" "1"
-call :run_reg_add "HKCU\Control Panel\Desktop" "UserPreferencesMask" "REG_BINARY" "9E 1E 01 80 12 00 00 00"
+call :run_reg_add "HKCU\Control Panel\Desktop" "UserPreferencesMask" "REG_BINARY" "9E1E018012000000"
 echo !COLOR_SECTION!--애니메이션 기능 켜기 완료--!COLOR_RESET!
 echo.
 
