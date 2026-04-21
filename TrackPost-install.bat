@@ -96,7 +96,7 @@ echo.
 echo !COLOR_SECTION!--애니메이션 기능 켜기--!COLOR_RESET!
 call :run_reg_add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" "VisualFXSetting" "REG_DWORD" "3"
 call :run_reg_add "HKCU\Control Panel\Desktop\WindowMetrics" "MinAnimate" "REG_SZ" "1"
-call :run_reg_add "HKCU\Control Panel\Desktop" "UserPreferencesMask" "REG_BINARY" "9E3E078012000000"
+call :run_reg_add "HKCU\Control Panel\Desktop" "UserPreferencesMask" "REG_BINARY" "9032078012000000"
 call :run_reg_add "HKLM\SYSTEM\CurrentControlSet\Control\Citrix" "EnableVisualEffect" "REG_DWORD" "1"
 echo !COLOR_SECTION!--애니메이션 기능 켜기 완료--!COLOR_RESET!
 echo.
