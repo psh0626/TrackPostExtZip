@@ -1,5 +1,5 @@
-chcp 65001 >nul
 @echo off
+chcp 65001 >nul
 setlocal EnableDelayedExpansion
 
 for /f %%E in ('echo prompt $E^| cmd') do set "ESC=%%E"
@@ -91,6 +91,13 @@ echo.
 echo !COLOR_SECTION!--오류 보고 기능 끄기--!COLOR_RESET!
 call :run_reg_add "HKCU\Software\Policies\Microsoft\Windows\Windows Error Reporting" "DisableSearchBoxSuggestions" "REG_DWORD" "1"
 echo !COLOR_SECTION!--오류 보고 기능 끄기 완료--!COLOR_RESET!
+
+echo.
+echo !COLOR_SECTION!--애니메이션 기능 켜기--!COLOR_RESET!
+call :run_reg_add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" "VisualFXSetting" "REG_DWORD" "3"
+call :run_reg_add "HKCU\Control Panel\Desktop\WindowMetrics" "MinAnimate" "REG_SZ" "1"
+call :run_reg_add "HKCU\Control Panel\Desktop" "UserPreferencesMask" "REG_BINARY" "9032078012000000"
+echo !COLOR_SECTION!--애니메이션 기능 켜기 완료--!COLOR_RESET!
 echo.
 
 :WINDOWS_END
@@ -123,6 +130,12 @@ call :run_reg_add "%KEY3%" "DeveloperToolsAvailability" "REG_DWORD" "1"
 echo.
 call :run_reg_add "%KEY3%" "DeveloperToolsDisabled" "REG_DWORD" "0"
 echo !COLOR_SECTION!--확장프로그램 설정 완료--!COLOR_RESET!
+
+echo.
+echo !COLOR_SECTION!--하드웨어 가속 설정--!COLOR_RESET!
+call :run_reg_add "%KEY3%" "HardwareAccelerationModeEnabled" "REG_DWORD" "1"
+echo.
+echo !COLOR_SECTION!--하드웨어 가속 설정 완료--!COLOR_RESET!
 
 echo.
 echo !COLOR_SECTION!--기본 검색 엔진 설정--!COLOR_RESET!
@@ -178,6 +191,12 @@ call :run_reg_add "%KEY5%" "DeveloperToolsAvailability" "REG_DWORD" "1"
 echo.
 call :run_reg_add "%KEY5%" "DeveloperToolsDisabled" "REG_DWORD" "0"
 echo !COLOR_SECTION!--확장프로그램 설정 완료--!COLOR_RESET!
+
+echo.
+echo !COLOR_SECTION!--하드웨어 가속 설정--!COLOR_RESET!
+call :run_reg_add "%KEY5%" "HardwareAccelerationModeEnabled" "REG_DWORD" "1"
+echo.
+echo !COLOR_SECTION!--하드웨어 가속 설정 완료--!COLOR_RESET!
 
 echo.
 echo !COLOR_SECTION!--항상 활성화 사이트 설정--!COLOR_RESET!
