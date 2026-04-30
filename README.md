@@ -42,6 +42,9 @@
 > 1.  설치 완료!
 
 <br />
+<br />
+
+
 <details>
 <summary> [ TrackPost-install.bat ]  이 설정하는 사항들</summary>
 <hr />
@@ -51,10 +54,11 @@
 | :--- | :--- | :--- |
 | 알림 센터 활성화 | TrackPost 확장 설치 허용 목록 추가 | TrackPost 확장 설치 허용 목록 추가 |
 | 토스트/앱 알림 허용 | TrackPost 확장 강제 설치 | TrackPost 확장 강제 설치 |
-| 빙 검색 제안 비활성화 | 확장 업데이트 URL override 허용 | 확장 업데이트 URL override 허용 |
-| 오류 보고 기능 끄기 | 개발자 도구 관련 제한 해제 | 개발자 도구 관련 제한 해제 |
+| 빙 검색 제안 비활성화 | 확장 툴바에 강제 표시 | 확장 툴바에 강제 표시 |
+| 오류 보고 기능 끄기 | 확장 업데이트 URL override 허용 | 확장 업데이트 URL override 허용 |
+| 시각효과 설정 제어 | 개발자 도구 관련 제한 해제  | 개발자 도구 관련 제한 해제 |
+|  | 하드웨어 가속 설정 | 하드웨어 가속 설정 |
 |  | 탭 절전 예외 사이트 등록 | 탭 절전 예외 사이트 등록 |
-|  | 툴바에 강제 표시 | 툴바에 강제 표시 |
 |  | 사이드바 자동 열림 차단 해제 |  |
 | 　　　　　　　　　　　　　　 | 기본 검색 엔진을 Google로 설정 　　　　　 | 　　　　 　　　　　　　　　　　　　 |
 
@@ -78,6 +82,24 @@ https://mail.posa.or.kr
 
 <br />
 
+
+<details>
+<summary> [ anim.exe ] 파일이 설정하는 사항 </summary>
+<hr />
+
+    anim.exe 파일은 실행시 아래 설정을 활성화합니다. 해당 옵션을 통해 확장프로그램 내 애니메이션 효과를 활성화할 수 있습니다.
+
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/1695da47-1c26-43d9-b3d9-b5d08648aa98" /> <br />
+`(SystemPropertiesPerformance.exe)` <br /> <br />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/fdf7600c-504f-46d3-8507-335f0666fc32" /> <br />
+`(윈도우 설정 -> 접근성 -> 시각 효과 -> 애니메이션 효과)` <br />
+
+- 파일 다운로드: [anim.zip](https://github.com/psh0626/TrackPostExtZip/releases/latest/download/anim.zip)
+
+</details>
+<br />
+
+
 ## 작동 화면
 
 ### Popup UI
@@ -94,7 +116,7 @@ https://mail.posa.or.kr
 <img width="408" alt="optionsPage" src="https://github.com/user-attachments/assets/bad6941f-f444-47d6-ad58-0d18d4b960ad" />
 <img width="334" align="top" alt="image" src="https://github.com/user-attachments/assets/1c046255-725a-4cac-9ab0-497804060641" />
 <img width="408" alt="image" src="https://github.com/user-attachments/assets/c846d4b1-88ee-4f02-84fe-5e5fa5225d9d" />
-<img width="352" align="top" alt="image" src="https://github.com/user-attachments/assets/9e5cd142-650e-4ab1-8a7e-9ac677454edf" />
+<img width="408" align="top" alt="image" src="https://github.com/user-attachments/assets/6be6e7b2-1852-420c-9d7d-142bc827c40d" />
 
 
 ## Windows Notification
